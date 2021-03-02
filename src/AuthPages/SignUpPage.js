@@ -32,14 +32,14 @@ export default class SignUpPage extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         e-mail
-                         <input value={this.state.email} onChange={this.handleEmailChange} />
+                        <input value={this.state.email} onChange={this.handleEmailChange} />
                     </label>
                     <label>
                         password
-                         <input value={this.state.password} onChange={this.handlePasswordChange} />
+                        <input value={this.state.password} onChange={this.handlePasswordChange} />
                     </label>
                     <button>Sign Up!</button>
-                 </form>
+                </form>
             </div>
         )
     }
