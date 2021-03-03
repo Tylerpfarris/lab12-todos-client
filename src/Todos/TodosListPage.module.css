@@ -1,0 +1,33 @@
+div {
+    width: 100%;
+}
+
+form {
+    justify-content: center;
+    align-items: center;
+   
+    width: 50%;
+   padding-left: 10px;
+
+   margin-left: 10px;
+}
+
+.todoDiv p {
+    display: block;
+    border: black solid 1px;
+    width: 50%;
+    margin-left: 10px;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.todoDiv {
+    width: 50%;
+    
+   
+   
+}
+
+.todo {
+    
+}

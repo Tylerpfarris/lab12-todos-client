@@ -1,14 +1,26 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
-
+import style from './Header.module.css';
 export default class Header extends Component {
     render() {
         return (
-            <div>
-                <NavLink to="/">Home</NavLink> 
-                <NavLink to="/todos">Todos</NavLink> 
-                <NavLink to="/login">Log In</NavLink> 
-                <NavLink to="/signup">Sign up</NavLink> 
+            <div className={style.headerDiv}>
+                <NavLink to="/"><p>Home</p></NavLink> 
+                {
+                    this.props.user && this.props.user.token &&
+                    <>
+                        <NavLink to="/todos"><p>Todos</p></NavLink> 
+                        <button onClick={this.props.handleLogOut}>Sign Out</button>
+                    </>
+                }
+                {
+                    (!this.props.user || !this.props.user.token) && 
+                    <>
+                        <NavLink to="/login"><p>Log In</p></NavLink> 
+                        <NavLink to="/signup"><p>Sign</p> up</NavLink> 
+                    </>
+                }
+             
                 
             </div>
         )

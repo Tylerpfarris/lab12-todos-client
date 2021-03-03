@@ -20,15 +20,17 @@ export default class SignUpPage extends Component {
 
         const user = await signUpUser(this.state.email, this.state.password);
 
-        this.props.handelUserChange(user);
+        this.props.handleUserChange(user);
 
         this.props.history.push('/todos');
+
+        
     }
 
     render() {
         return (
             <div>
-                Sign up page
+                <h3>Sign up page</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         e-mail

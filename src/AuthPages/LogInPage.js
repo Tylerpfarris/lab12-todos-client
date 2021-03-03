@@ -20,7 +20,7 @@ export default class LogInPage extends Component {
 
         const user = await logInUser(this.state.email, this.state.password);
 
-        this.props.handelUserChange(user);
+        this.props.handleUserChange(user);
 
         this.props.history.push('/todos');
     }
@@ -28,7 +28,7 @@ export default class LogInPage extends Component {
     render() {
         return (
             <div>
-                Log In
+                <h3>Log In</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         e-mail
@@ -38,7 +38,7 @@ export default class LogInPage extends Component {
                         password
                          <input value={this.state.password} onChange={this.handlePasswordChange} />
                     </label>
-                    <button>Sign Up!</button>
+                    <button>Log In!</button>
                  </form>
             </div>
         )
